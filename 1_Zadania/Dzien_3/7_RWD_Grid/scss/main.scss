@@ -1,0 +1,97 @@
+// .grid-container{
+//   width: 100%;
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   .row{
+//     //tylko dla testu, żeby pokazać granice row
+//     // margin-bottom: 15px;
+//     // border-bottom: 1px dashed red;
+//     &:after, &:before{
+//       content: '';
+//       display: block;
+//       clear: both;
+//     }
+//     [class*="col-"]{
+//       box-sizing: border-box;
+//       float: left;
+//       padding: 0px 10px;
+//       min-height: 1px;
+//
+//     }
+//     @for $i from 1 through 12{
+//       .col-#{$i}{
+//         width: $i/12 * 100%;
+//         @media (max-width: 550px){
+//           width: 100%;
+//         }
+//         @media (min-width: 551px) and (max-width: 960px){
+//           @if $i < 6{
+//             width: 50%;
+//           }
+//           @else{
+//             width: 100%;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// img{
+//   max-width: 100%;
+// }
+
+
+//Zadanie 1
+.grid-container{
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+.row{
+  &:after, &:before{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  [class*="col-"]{
+    box-sizing: border-box;
+    float: left;
+    padding: 0px 10px;
+    margin-bottom: 15px;
+    min-height: 500px;
+    // .rows {
+    //   min-height: 100px;
+    //   padding: 0;
+    //   margin-bottom: 10px;
+    // }
+    // .yellow {
+    //   padding: 0;
+    //   margin-bottom: 20px;
+    //   margin-top: 20px;
+    //   background: black;
+    // }
+  }
+  @for $i from 1 through 12{
+    .col-#{$i}{
+      width: $i/12 * 100%;
+      @media (max-width: 550px){
+        width: 100%;
+      }
+    }
+  }
+}
+.rows {
+  min-height: 100px !important;
+  padding: 0px !important;
+  margin-bottom: 10px !important;
+}
+.yellow {
+  margin-bottom: 40px !important;
+}
+.purple {
+  min-height: 300 px !important;
+  margin-bottom: 40px !important;
+}
+.footer {
+  min-height: 200 px !important;
+}

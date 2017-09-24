@@ -1,0 +1,97 @@
+// html,body{
+//   margin: 0;
+//   padding: 0;
+// }
+//
+// article{
+//   display: -webkit-flex;
+//   display: -ms-flex;
+//   display: flex;
+//   width: 100vw;
+//   height: 100vh;
+//   align-items: stretch;
+//   section{
+//     width: 100px;
+//     min-height: 100px;
+//     margin: 10px;
+//     background: #abc;
+//     flex-grow: 0;
+//     &.big{
+//       flex-grow: 1;
+//     }
+//   }
+// }
+
+//1//
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//2//
+@mixin web {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.circles {
+  display: flex;
+  flex-wrap: wrap;
+  @include web;
+  margin-bottom: 50px;
+}
+.gow {
+  border: 2px solid red;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: red;
+  @include web;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+//3//
+//grid
+.crazy-layout{
+  // @include web;
+  display:flex;
+  flex:	0	1	auto;
+  flex-wrap:	wrap;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.row{
+  &:after, &:before{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  [class*="kon"] {
+    background-color: blue;
+    margin: auto;
+
+    margin-bottom: 10px;
+  }
+  @for $i from 1 through 12{
+    .col#{$i}{
+      width: $i/12 * 100%;
+      @media (max-width: 420px){
+        width: 100%;
+        //
+      }
+    }
+  }
+}
+//flex
+
+[class*="kon"] {
+  background-color: blue;
+  margin: auto;
+  width: 500px;
+  margin-bottom: 10px;
+}

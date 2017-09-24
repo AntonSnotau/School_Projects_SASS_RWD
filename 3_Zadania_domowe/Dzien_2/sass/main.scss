@@ -1,1 +1,40 @@
 // Zadanie 1
+.test_units {
+  font-size: 30px;
+  border: 2px solid grey;
+  width: 25em;
+  height: 5em;
+}
+
+header {
+  font-size: 50%;
+}
+
+//2//
+.block {
+  width: 25%;
+  height: 100vh;
+  border: 1px solid red;
+  float: left;
+  @media (max-width: 449px){
+    float: none;
+    &:last-child{
+      // visibility: hidden;
+      display: none;
+    }
+  }
+  @media (min-width: 450px) and (max-width: 719px){
+    &:first-child{
+      visibility: hidden;
+    }
+  }
+  @media (min-width: 720px) and (max-width: 1023px){
+    visibility: hidden;
+    &:first-child{
+      visibility: visible;
+    }
+    &:last-child{
+      visibility: visible;
+    }
+}
+}

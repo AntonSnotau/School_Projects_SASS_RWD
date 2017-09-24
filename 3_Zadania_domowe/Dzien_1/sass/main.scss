@@ -1,4 +1,28 @@
 // Zadanie 1
+@mixin setTooltip($text, $color){
+  content: $text;
+  display: block;
+  background: $color;
+  width: 200px;
+  height: 50px;
+}
 
+.lista:hover::after {
+  @include setTooltip("Heya, jestem Tolltipem!", orange);
+}
 
 // Zadanie 2
+
+$font-sizes: (
+ fs1: 100px,
+ fs2: 50px,
+ fs3: 6px
+ );
+
+$font: map-values($font-sizes);
+
+@for $i from 1 through 3{
+   h#{$i}{
+     font-size: nth($font, $i);
+   }
+ }

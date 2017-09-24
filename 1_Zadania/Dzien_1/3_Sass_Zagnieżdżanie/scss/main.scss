@@ -1,0 +1,71 @@
+//poprzednie zadanie//
+
+$color-main: blue;
+$color-menu: yellow;
+$padding-section: 30px;
+$main-width: 1000px;
+
+body {
+  background-color: black;
+  color: yellow;
+}
+a {
+  color: red;
+}
+.menu {
+  color: $color-menu;
+}
+section {
+  padding: $padding-section;
+}
+
+//to zadamie//
+
+.main-width{
+  width: $main-width;
+  li{
+    &:first-child{
+      color: red;
+    }
+  }
+}
+
+.menu {
+  li{
+    float: left;
+    padding-left: 10px;
+  }
+  background-color: $color-main;
+}
+
+header {
+  border: $padding-section;
+}
+
+.hover {
+  a{
+    &:hover{
+      color: blue;
+    }
+  }
+  li{
+    &:first-child{
+      color: orange;
+      a{
+        color: orange;
+        &:hover{
+          color: blue;
+        }
+      }
+    }
+    &:last-child{
+      color: green;
+      a{
+        color: green;
+        &:hover{
+          color: blue;
+        }
+      }
+    }
+  }
+}

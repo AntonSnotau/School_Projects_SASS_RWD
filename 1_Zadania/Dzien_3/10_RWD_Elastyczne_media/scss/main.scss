@@ -1,0 +1,52 @@
+html,body{
+  margin: 0;
+  padding: 0;
+}
+@mixin image{
+  @media (min-width: 550px){
+    float: left;
+    width: 50%;
+  }
+}
+.images{
+  img{
+    max-width: 100%;
+    @include image;
+  }
+  .image{
+    background-image: url(../images/rabbit.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    height: 300px;
+    transition: 2s background-size ease;
+    &:hover{
+      background-size: 130%;
+    }
+    @include image;
+  }
+}
+
+//1//
+.one-image img {
+  height: 200px;
+  width: 200px;
+  border: 1px solid grey;
+  margin-bottom: 10px;
+  img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+}
+
+//2//
+.one-image-bg {
+  height: 200px;
+  width: 200px;
+  border: 1px solid grey;
+  img {
+    width: 75%;
+    height: 75%;
+  }
+}

@@ -1,0 +1,65 @@
+%box{
+  float: left;
+  width: 50%;
+  height: 100px;
+}
+ %clearfix{
+   content: '';
+   clear: both;
+   display: block;
+ }
+
+section.test-mixin{
+  width: 100%;
+  margin-bottom: 50px;
+  &:before{
+    @extend %clearfix;
+  }
+  &:after{
+    @extend %clearfix;
+
+  }
+  .left_box{
+    @extend %box;
+    background: red;
+  }
+  .right_box{
+    @extend %box;
+    background: green;
+  }
+}
+//1//
+#admin	.nav	a	{
+		color:	#333;
+}
+%color {
+  color:	#666;
+}
+
+#demo	.body	.link	{
+		@extend	%color;
+}
+
+//2//
+%container{
+  width: 40%;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid grey;
+  padding: 10px;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 16px;
+}
+.success {
+  @extend %container;
+  background-color: rgba(210,255,82,1);
+}
+.error {
+  @extend %container;
+  background-color: rgba(255,0,132,1);
+}
+.info {
+  @extend %container;
+  background-color: rgba(179,220,237,1);
+}

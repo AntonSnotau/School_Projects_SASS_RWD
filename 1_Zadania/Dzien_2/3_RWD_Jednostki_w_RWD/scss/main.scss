@@ -1,0 +1,122 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  // font-size: 10px;
+  // height: 100%;
+  font-size: 8px;
+  width: 960px;
+}
+.test{
+  background: yellow;
+  // width: 100%;
+  // height: 100%;
+  height: 50vh;
+}
+.boxes{
+  width: 50%;
+  clear: both;
+  &:after, &:before{
+    content: '';
+    clear: both;
+    display: block;
+  }
+  .box{
+    height: 50vh;
+    // width: 33.3333vw;
+    width: 33.3333%;
+    background: cyan;
+    box-sizing: border-box;
+    border: 2px #333 dashed;
+    float: left;
+  }
+}
+p{
+  margin-top: 0;
+}
+
+.test{
+  // font-size: 30px;
+  p{
+    font-size: 2em; //32px
+  }
+  span{
+    font-size: 2rem; //32px
+  }
+  strong{
+    font-size: 150%; //24px
+  }
+}
+
+//1//
+.panel {
+  font-size: 40px;
+}
+.panel p {
+  font-size: 0.5em;
+}
+
+//2//
+.bg_box {
+  width: 30px;
+}
+.bg_box .box {
+  font-size: 2em;
+  width: 2em;
+}
+
+//3//
+.container p {
+  font-size: 3rem;
+}
+
+//4//
+.wolf_text {
+  border: 2px solid grey;
+  width: 0.25rem;
+}
+
+//5//
+.winnie_the_pooh {
+  font-size: 10px;
+}
+.winnie_the_pooh blockquote {
+  font-size: 300%;
+}
+
+//6// //7//
+.images {
+  height: 400px;
+  // width: 80%;
+  border: 2px solid grey;
+}
+.images .img_one {
+  background-image: url("../images/cat.jpg");
+  width: 30%;
+  height: 100%;
+}
+//teraz 30% od szerokosci boxu.
+
+//8// //9//
+
+.test_hight_grandpa {
+  border: 2px solid blue;
+  // height: 50px;
+}
+.test_height_daddy {
+  border: 2px solid orange;
+  height: 200%;
+}
+.test_height_baby {
+  border: 2px solid pink;
+  height: 50%;
+}
+
+// przy zakomentowaniu wysokosci dziadkowi bierze sie wysokosc domyslna, czyli wysokosc tekstu//
+
+//10//
+
+h1 {
+  margin: 50vw;
+  height: 50vh;
+
+}

@@ -1,0 +1,41 @@
+$color: pink, beige, blue, red;
+$widths: (
+  main: 1000px,
+  half: 50%,
+  semi: 700px
+);
+$mapcolor: (
+  red: red,
+  blue: blue,
+  black: black,
+  white: white,
+  pink: pink
+);
+$width: (
+  min: 1000px,
+  max: 500px
+);
+
+$rez: map-values($width);
+
+body {
+  // background: nth($color, 2);
+  background: map-get($mapcolor, 5);
+  // width: map-get($widths, main);
+}
+header{
+  background: nth($color, 1);
+  width: nth($rez, 1);
+  border: 2px solid grey;
+}
+section.main-width{
+  // background: map-get($mapcolor, 3);
+  background: nth($color, 3);
+  width: map-get($widths, semi);
+}
+footer{
+  background: map-get($mapcolor, 3);
+}
+p {
+  background: map-get($mapcolor, 3);
+}

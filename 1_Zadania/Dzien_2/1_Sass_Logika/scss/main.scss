@@ -1,0 +1,44 @@
+$font-base: 16px;
+$colors: red, blue, pink, yellow;
+$timeOfDay: 'morning';
+@mixin timeIs($timeOfDay) {
+  @if $timeOfDay == 'morning' {
+    background-color: orange;
+  }
+  @else if $timeOfDay == 'midday'{
+    background-color: yellow;
+  }
+  @else if $timeOfDay == 'evening'{
+    background-color: navy;
+  }
+  @else if $timeOfDay == 'night'{
+    background-color: black;
+  }
+}
+
+body {
+  @include timeIs($timeOfDay);
+}
+@for $i from 1 through 4{
+  h#{$i}{
+    font-size: $font-base * 4/$i;
+    background: nth($colors, $i);
+  }
+}
+div {
+  height: 200px;
+  width: 50%;
+}
+@for $i from 1 through 10{
+  @if $i % 2 == 0 {
+    .block_#{$i}{
+      background-color: orange;
+    }
+  }
+  @else {
+    .block_#{$i}{
+      background-color: blue;
+    }
+  }
+
+}

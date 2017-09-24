@@ -1,0 +1,76 @@
+// body{
+//  background: #000;
+//  @media (max-width: 419px){
+//    background: yellow;
+//  }
+//  @media (min-width: 421px){
+//    background: blue;
+//  }
+// }
+
+@mixin placeholder {
+ &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   @content;
+ }
+ &::-moz-placeholder { /* Firefox 19+ */
+   @content;
+ }
+ &:-ms-input-placeholder { /* IE 10+ */
+   @content;
+ }
+ &:-moz-placeholder { /* Firefox 18- */
+   @content;
+ }
+}
+
+@mixin breakpoint-tablet{
+ @media screen and (min-width: 550px) and (max-width: 980px){
+   @content;
+ }
+}
+
+form.my-form{
+ input{
+   width: 300px;
+   height: 50px;
+   font-size: 50px;
+   @include placeholder{
+     color: red;
+     font-size: 20px;
+     line-height: 1;
+   }
+   @include breakpoint-tablet{
+     width: 100%;
+     background: #abc;
+     border: none;
+   }
+
+ }
+}
+
+
+//1//done//
+
+//2//
+body{
+ background: zielony;
+ @media (max-width: 399px){
+   background: green;
+ }
+ @media (min-width: 400px) and (max-width: 799px){
+   background: orange;
+ }
+}
+
+//3//
+div {
+  width: 400px;
+  height: 400px;
+  background: green;
+  margin: 10px;
+  float: left;
+  @media screen and (max-width: 639px){
+    width: 100%;
+    float: none;
+  }
+}

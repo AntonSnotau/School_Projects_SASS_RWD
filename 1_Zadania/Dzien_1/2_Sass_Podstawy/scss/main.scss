@@ -1,0 +1,20 @@
+$color-main: blue;
+$color-menu: yellow;
+$padding-section: 30px;
+
+body {
+  background-color: black;
+  color: yellow;
+}
+a {
+  color: red;
+}
+.menu {
+  color: $color-menu;
+  background-color: $color-main;
+}
+section {
+  padding: $padding-section;
+}
+/* zadanie jeden - expanded */
+// bo są czytelnie! //

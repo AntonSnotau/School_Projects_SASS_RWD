@@ -1,0 +1,16 @@
+$lighten-color: lighten(red, 40%);
+$font-base: 16px;
+$colors: red, blue, pink, yellow;
+$num: 100;
+
+p {
+  color: $lighten-color;
+  font-size: percentage($num);
+}
+
+@for $i from 1 through 4{
+  h#{$i}{
+    font-size: $font-base * 4/$i;
+    background: lighten(red, 15% * ($i - 1));
+  }
+}
