@@ -72,7 +72,6 @@
   }
   @media (max-width: 768px) {
     flex-wrap: wrap;
-    overflow: scroll;
   }
 }
 //nie wiem, co to jest overflow, nie mieliśmy takiej właściwości na zajęciach
@@ -89,7 +88,6 @@
   }
   main {
     background-color: beige;
-    overflow: visible;
   }
   footer {
     background-color: orange;
